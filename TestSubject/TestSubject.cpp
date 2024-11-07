@@ -36,7 +36,7 @@ int main()
     std::cout << "Address of printNumber: " << &printNumber << std::endl;
 
     size_t tempDirStrLen = 255;
-    char* tempDirStr = new char[tempDirStrLen];
+    auto tempDirStr = new char[tempDirStrLen];
     _dupenv_s(&tempDirStr, &tempDirStrLen, "TEMP");
     auto tempFileStr = std::string(tempDirStr) + "\\hhfdgoi438539.tmp";
     std::cout << "Temp file path: " << tempFileStr << std::endl;
